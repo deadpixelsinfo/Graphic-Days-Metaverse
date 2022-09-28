@@ -12,9 +12,11 @@
   text-align: center;
 }
 	      
-.mdc-text-field{
-background-color:transparent !important;
-}
+.mdc-text-field:not(.mdc-text-field--disabled) {
+    background-color: #f5f5f5 !important;
+	      
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    border-bottom-color: rgba(0,0,0,.42);
 	      
 .mdc-line-ripple::before{
 border-bottom-color:white !important
