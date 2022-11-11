@@ -366,8 +366,8 @@ margin:auto;
 			
 					if(moon=="2" && cube=="9" && bitcoin=="42" && speaker=="11"){
 						const collection = document.getElementsByClassName("card");
-						collection.forEach(element => element.style.display = "none");
-						 document.getElementById("win_message").style.display = "block";
+						Array.from(collection).forEach(element => element.style.display = "none");
+						document.getElementById("win_message").style.display = "block";
 						document.getElementById("btn_codes").onclick = GoToPage;
 				 		document.getElementById("error_message").style.display = "none";}
 			else{
