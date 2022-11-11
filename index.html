@@ -244,7 +244,8 @@ margin:auto;
 	      
       </div>
       <div class="modal-footer" style="justify-content: center;">
-        <button type="button" class="btn btn-primary">Enter</button>
+        <button type="button" class="btn btn-primary" onclick="checkCodes()">Enter</button>
+	      <p id="error_message" style="color: red;"></p>
       </div>
     </div>
   </div>
@@ -338,5 +339,20 @@ margin:auto;
 			 x.style.display = "block";
 		}
 		}
+		
+		function checkCodes() {
+  			var moon = document.getElementById("MoonNumber").value;
+			var cube = document.getElementById("CubeNumber").value;
+			var bitcoin = document.getElementById("BitcoinNumber").value;
+			var speaker = document.getElementById("SpeakerNumber").value;
+			
+					if(moon=="2" && cube=="9" && bitcoin=="42" && speaker=="11"){
+						window.location.href = 'https://www.graphicdays.it/2022/ticket/';}
+			else{
+			
+			 document.getElementById("error_message").innerHTML="erroreee";
+		}
+			    
+}
 	</script>
 </html>
