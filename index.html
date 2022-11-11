@@ -262,7 +262,7 @@ margin:auto;
 	      
       </div>
       <div class="modal-footer" style="justify-content: center;">
-        <button type="button" class="btn btn-primary" onclick="checkCodes()">Enter</button>
+        <button id="btn_codes" type="button" class="btn btn-primary" onclick="checkCodes()">Enter</button>
 	      <p id="error_message">The unlock code you entered is not correct</p>
       </div>
     </div>
@@ -366,8 +366,9 @@ margin:auto;
 			
 					if(moon=="2" && cube=="9" && bitcoin=="42" && speaker=="11"){
 						const collection = document.getElementsByClassName("card");
-						collection.forEach(element => element.style.display = "none"));
-						window.location.href = 'https://www.graphicdays.it/2022/ticket/';
+						collection.forEach(element => element.style.display = "none");
+						 document.getElementById("win_message").style.display = "block";
+						document.getElementById("btn_codes").onclick = GoToPage;
 				 		document.getElementById("error_message").style.display = "none";}
 			else{
 			
@@ -377,6 +378,14 @@ margin:auto;
 		
 		function hideError(){
 			 document.getElementById("error_message").style.display = "none";
+			 document.getElementById("win_message").style.display = "none";
+			 document.getElementById("btn_codes").onclick = checkCodes;
+			const collection = document.getElementsByClassName("card");
+			collection.forEach(element => element.style.display = "block");
+			}
+		
+		function GoToPage(){
+			 window.location.href = 'https://www.graphicdays.it/2022/ticket/';
 			}
 	</script>
 </html>
