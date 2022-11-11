@@ -370,6 +370,7 @@ margin:auto;
 						Array.from(collection).forEach(element => element.style.display = "none");
 						document.getElementById("win_message").style.display = "block";
 						document.getElementById("btn_codes").onclick = GoToPage;
+						document.getElementById("btn_codes").innerHTML = Go to GD22;
 				 		document.getElementById("error_message").style.display = "none";}
 			else{
 			
@@ -381,6 +382,7 @@ margin:auto;
 			 document.getElementById("error_message").style.display = "none";
 			 document.getElementById("win_message").style.display = "none";
 			 document.getElementById("btn_codes").onclick = checkCodes;
+			document.getElementById("btn_codes").innerHTML = Enter;
 			const collection = document.getElementsByClassName("card");
 			collection.forEach(element => element.style.display = "block");
 			}
