@@ -48,6 +48,15 @@ border-bottom-color:white !important
     margin: 3% auto 13% auto
 }
 
+#error_message{
+	color: red;
+	margin: auto;
+	width: 100%;
+	position: absolute;
+	padding: 30px;
+	display: none;
+	      }
+
 .username,
 .password {
   display: flex;
@@ -186,7 +195,7 @@ margin:auto;
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Crack the code and win a 30% off coupon!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick= "hideError()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -245,7 +254,7 @@ margin:auto;
       </div>
       <div class="modal-footer" style="justify-content: center;">
         <button type="button" class="btn btn-primary" onclick="checkCodes()">Enter</button>
-	      <p id="error_message" style="color: red;"></p>
+	      <p id="error_message">The unlock code you entered is not correct</p>
       </div>
     </div>
   </div>
@@ -347,11 +356,16 @@ margin:auto;
 			var speaker = document.getElementById("SpeakerNumber").value;
 			
 					if(moon=="2" && cube=="9" && bitcoin=="42" && speaker=="11"){
-						window.location.href = 'https://www.graphicdays.it/2022/ticket/';}
+						window.location.href = 'https://www.graphicdays.it/2022/ticket/';
+				 		document.getElementById("error_message").style.display = "none";}
 			else{
 			
-			 document.getElementById("error_message").innerHTML="erroreee";
+			 document.getElementById("error_message").style.display = "block";
 		}
+			
+			function hideError(){
+			 document.getElementById("error_message").style.display = "none";
+			}
 			    
 }
 	</script>
