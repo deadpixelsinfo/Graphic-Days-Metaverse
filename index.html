@@ -384,7 +384,7 @@ margin:auto;
 			 document.getElementById("btn_codes").onclick = checkCodes;
 			document.getElementById("btn_codes").innerHTML = "Enter";
 			const collection = document.getElementsByClassName("card");
-			collection.forEach(element => element.style.display = "block");
+			Array.from(collection).forEach(element => element.style.display = "block");
 			}
 		
 		function GoToPage(){
